@@ -2,6 +2,11 @@
 Distance measurement using Stereo Vision. This project mesaures the distance of an object using opencv stereo vision and python.
 
 ## Installations and Setup:
+Stereo Camera Rig:
+ <p align="center">
+  <img src="stereo_rig.jpg" width=600 height=400>
+ </p>
+
  ``` bash
  # Add conda to python2 path:
  export PATH=~/anaconda2/bin:$PATH
@@ -24,7 +29,12 @@ Distance measurement using Stereo Vision. This project mesaures the distance of 
  # Take images for calibration:
  python capture_chessboards -h
  python capture_chessboards.py --rows 6 --columns 9 --square-size 2.5 --calibration-folder calibration_files 0 1 50 calibration_images
+ ```
+ <p align="center">
+  <img src="left_07.ppm" width=600 height=400>
+ </p>
  
+ ```bash
  # Calibrate cameras using calibration_images:
  python calibrate_cameras.py -h
  python capture_chessboards.py --rows 6 --columns 9 --square-size 2.5 --calibration-folder calibration_files 0 1 50 calibration_images
