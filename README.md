@@ -3,8 +3,13 @@ Distance measurement using Stereo Vison. This project mesaures the distance of a
 
 ## Installations and Setup:
  ``` bash
-
-# Take the images for calibrations. We have to execute following command for help:
+ # Add conda to python2 path:
+ export PATH=~/anaconda2/bin:$PATH
+ 
+ # Download opencv package (2.4.13) by running following command:
+ conda install -c dhaneshr opencv  
+ 
+# Take images for calibration. We have to execute following command for help:
 capture_chessboards -h
 
 # Note: Above command will list down the required parameters for capturing the images of chessboard
