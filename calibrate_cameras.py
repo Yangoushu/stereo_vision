@@ -21,7 +21,7 @@ Calibrate stereo camera based on detected chessboard corners.
 """
 
 from argparse import ArgumentParser
-from stereovision.ui_utils import (find_files, calibrate_folder,
+from ui_utils import (find_files, calibrate_folder,
                                   CHESSBOARD_ARGUMENTS)
 
 

@@ -25,9 +25,9 @@ import os
 
 import cv2
 from progressbar import ProgressBar, Bar, Percentage
-from stereovision.stereo_cameras import ChessboardFinder
-from stereovision.ui_utils import calibrate_folder, CHESSBOARD_ARGUMENTS
-from stereovision.ui_utils import find_files
+from stereo_cameras import ChessboardFinder
+from ui_utils import calibrate_folder, CHESSBOARD_ARGUMENTS
+from ui_utils import find_files
 
 
 PROGRAM_DESCRIPTION=(

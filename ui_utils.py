@@ -42,8 +42,8 @@ import os
 
 import cv2
 from progressbar import ProgressBar, Percentage, Bar
-from stereovision.calibration import StereoCalibrator
-from stereovision.exceptions import BadBlockMatcherArgumentError
+from calibration import StereoCalibrator
+# from exceptions import BadBlockMatcherArgumentError
 
 #: Command line arguments for collecting information about chessboards
 CHESSBOARD_ARGUMENTS = ArgumentParser(add_help=False)
@@ -135,7 +135,9 @@ class BMTuner(object):
         """Try setting new parameter on ``block_matcher`` and update map."""
         try:
             self.block_matcher.__setattr__(parameter, new_value)
-        except BadBlockMatcherArgumentError:
+        # except BadBlockMatcherArgumentError:
+        #     return
+        except:
             return
         self.update_disparity_map()
 
