@@ -4,7 +4,7 @@ Distance measurement using Stereo Vision. This project mesaures the distance of 
 ## Installations and Setup:
 Stereo Camera Rig:
  <p align="center">
-  <img src="stereo_rig.png" width=600 height=400>
+  <img src="stereo_rig.jpg" width=600 height=400>
  </p>
 
  ``` bash
@@ -31,7 +31,7 @@ Stereo Camera Rig:
  python capture_chessboards.py --rows 6 --columns 9 --square-size 2.5 --calibration-folder calibration_files 0 1 50 calibration_images
  ```
  <p align="center">
-  <img src="left_07.ppm" width=900 height=550>
+  <img src="left_07.ppm" width=600 height=400>
  </p>
  
  ```bash
