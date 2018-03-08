@@ -17,9 +17,9 @@ Distance measurement using Stereo Vison. This project mesaures the distance of a
  python show_webcams.py -h
  python show_webcams.py 0 1
  
+ # Take images for calibration:
+ capture_chessboards -h
  
-# Take images for calibration. We have to execute following command for help:
-capture_chessboards -h
 
 # Note: Above command will list down the required parameters for capturing the images of chessboard
 
