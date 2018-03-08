@@ -6,8 +6,17 @@ Distance measurement using Stereo Vison. This project mesaures the distance of a
  # Add conda to python2 path:
  export PATH=~/anaconda2/bin:$PATH
  
- # Download opencv package (2.4.13) by running following command:
+ # Download opencv package (2.4.13):
  conda install -c dhaneshr opencv  
+ 
+ # Install other dependencies:
+ conda install progressbar
+ conda install simplejson
+ 
+ # Test Webcams:
+ python show_webcams.py -h
+ python show_webcams.py 0 1
+ 
  
 # Take images for calibration. We have to execute following command for help:
 capture_chessboards -h
