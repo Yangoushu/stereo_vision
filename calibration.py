@@ -151,8 +151,9 @@ class StereoCalibrator(object):
         temp = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         ret, corners = cv2.findChessboardCorners(temp,
                                                  (self.rows, self.columns))
-        # if not ret:
-        #     raise ChessboardNotFoundError("No chessboard could be found.")
+        if not ret:
+            # raise ChessboardNotFoundError("No chessboard could be found.")
+            print 'No chessboard could be found'
         cv2.cornerSubPix(temp, corners, (11, 11), (-1, -1),
                          (cv2.TERM_CRITERIA_MAX_ITER + cv2.TERM_CRITERIA_EPS,
                           30, 0.01))
