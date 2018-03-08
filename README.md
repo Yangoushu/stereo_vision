@@ -35,6 +35,11 @@ Stereo Camera Rig:
  python capture_chessboards.py --rows 6 --columns 9 --square-size 2.5 --calibration-folder calibration_files 0 1 50 calibration_images
  # Error Note: If we do not hold the chessboard as 6x9 style(horizontally) it will not be able to calibrate the vertically captured image
 
+# Generate Stereo Images for Point Cloud
+python stereo_image_generator.py --output_folder stereo_images --interval 5 0 1
+python stereo_image_generator.py -h
+
+
 
 
 ```
