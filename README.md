@@ -2,6 +2,11 @@
 Distance measurement using Stereo Vision. This project mesaures the distance of an object using opencv stereo vision and python.
 
 ## Installations and Setup:
+Stereo Camera Rig:
+ <p align="center">
+  <img src="stereo_rig.png" width=600 height=400>
+ </p>
+
  ``` bash
  # Add conda to python2 path:
  export PATH=~/anaconda2/bin:$PATH
