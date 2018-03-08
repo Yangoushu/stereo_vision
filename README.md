@@ -34,20 +34,7 @@ Stereo Camera Rig:
  python calibrate_cameras.py -h
  python capture_chessboards.py --rows 6 --columns 9 --square-size 2.5 --calibration-folder calibration_files 0 1 50 calibration_images
  # Error Note: If we do not hold the chessboard as 6x9 style(horizontally) it will not be able to calibrate the vertically captured image
- 
- 
 
-# Note: Above command will list down the required parameters for capturing the images of chessboard
-
-# We need to pass the following arguments with the above command:
-capture_chessboards --rows 6 --columns 9 --square-size 2.5 --calibration-folder calibrated_files 0 1 50 calibrated_images
-
-# Now to generate files for calibration:
-time calibrate_cameras --rows 6 --columns 9 --square-size 2.5 calibrated_images/ calibrated_files/
-
-# tuning blockmatcher:
-sudo pip install simplejson
-tune_blockmatcher -h
 
 
 ```
