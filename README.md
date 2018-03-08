@@ -1,5 +1,5 @@
 # Stereo Vision
-Distance measurement using Stereo Vison. This project mesaures the distance of an object using opencv stereo vision and python.
+Distance measurement using Stereo Vision. This project mesaures the distance of an object using opencv stereo vision and python.
 
 ## Installations and Setup:
  ``` bash
