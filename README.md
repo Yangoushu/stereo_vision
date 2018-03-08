@@ -19,6 +19,10 @@ Distance measurement using Stereo Vison. This project mesaures the distance of a
  
  # Take images for calibration:
  python capture_chessboards -h
+ python capture_chessboards.py --rows 6 --columns 9 --square-size 2.5 --calibration-folder calibration_files 0 1 50 calibration_images
+ 
+ # 
+ 
  
 
 # Note: Above command will list down the required parameters for capturing the images of chessboard
