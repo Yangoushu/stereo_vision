@@ -13,6 +13,10 @@ Distance measurement using Stereo Vison. This project mesaures the distance of a
  conda install progressbar
  conda install simplejson
  
+ sudo add-apt-repository ppa:zarquon42/meshlab
+ sudo apt-get update
+ sudo apt-get install meshlab
+
  # Test Webcams:
  python show_webcams.py -h
  python show_webcams.py 0 1
@@ -21,7 +25,8 @@ Distance measurement using Stereo Vison. This project mesaures the distance of a
  python capture_chessboards -h
  python capture_chessboards.py --rows 6 --columns 9 --square-size 2.5 --calibration-folder calibration_files 0 1 50 calibration_images
  
- # 
+ # Calibrate cameras using calibration_images:
+ python calibrate_cameras.py -h
  
  
 
@@ -36,11 +41,6 @@ time calibrate_cameras --rows 6 --columns 9 --square-size 2.5 calibrated_images/
 # tuning blockmatcher:
 sudo pip install simplejson
 tune_blockmatcher -h
-
-# Install Meshlab
-sudo add-apt-repository ppa:zarquon42/meshlab
-sudo apt-get update
-sudo apt-get install meshlab
 
 
 ```
