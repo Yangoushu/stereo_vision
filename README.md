@@ -31,7 +31,7 @@ Stereo Camera Rig:
  python capture_chessboards.py --rows 6 --columns 9 --square-size 2.5 --calibration-folder calibration_files 0 1 50 calibration_images
  ```
  <p align="center">
-  <img src="capture_chessbaord.png" width=600 height=400>
+  <img src="capture_chessboard.png" width=600 height=400>
  </p>
  
  ```bash
