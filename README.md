@@ -43,7 +43,4 @@ python stereo_image_generator.py -h
 python tune_blockmatcher.py -h
 python tune_blockmatcher.py --use_stereobm --bm_settings settings.json calibration_files stereo_images
 
-
-
-
 ```
