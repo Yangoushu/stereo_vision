@@ -39,6 +39,10 @@ Stereo Camera Rig:
 python stereo_image_generator.py --output_folder stereo_images --interval 5 0 1
 python stereo_image_generator.py -h
 
+# Tune Block Matching Algorithm
+python tune_blockmatcher.py -h
+python tune_blockmatcher.py --use_stereobm --bm_settings settings.json calibration_files stereo_images
+
 
 
 
