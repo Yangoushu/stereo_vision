@@ -43,4 +43,8 @@ python stereo_image_generator.py -h
 python tune_blockmatcher.py -h
 python tune_blockmatcher.py --use_stereobm --bm_settings settings.json calibration_files stereo_images
 
+# Generate Point Cloud:
+python images_to_pointcloud.py -h
+python images_to_pointcloud.py --use_stereobm --bm_settings settings.json calibration_files left_1.ppm right_1.ppm output.ply
+
 ```
