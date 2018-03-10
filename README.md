@@ -35,16 +35,21 @@ Stereo Camera Rig:
  python capture_chessboards.py --rows 6 --columns 9 --square-size 2.5 --calibration-folder calibration_files 0 1 50 calibration_images
  # Error Note: If we do not hold the chessboard as 6x9 style(horizontally) it will not be able to calibrate the vertically captured image
 
-# Generate Stereo Images for Point Cloud
+# Generate Stereo Images for Point Cloud:
 python stereo_image_generator.py --output_folder stereo_images --interval 5 0 1
 python stereo_image_generator.py -h
 
-# Tune Block Matching Algorithm
+# Tune Block Matching Algorithm:
 python tune_blockmatcher.py -h
+
+# Use StereoBM rather than StereoSGBM block matcher:
 python tune_blockmatcher.py --use_stereobm --bm_settings settings.json calibration_files stereo_images
+# (Note: This do not give satisfactory results as it uses StereoBM rather than StereoSGBM block matcher
 
-# Generate Point Cloud:
+# Lets use StereoSGBM block matcher and generate settings.json for block matcher:
+python tune_blockmatcher.py --bm_settings settings.json calibration_files stereo_images
+
+# Generate Point Cloud using stereo image:
 python images_to_pointcloud.py -h
-python images_to_pointcloud.py --use_stereobm --bm_settings settings.json calibration_files left_1.ppm right_1.ppm output.ply
-
+python images_to_pointcloud.py --bm_settings settings.json calibration_files left_1.ppm right_1.ppm output.ply
 ```
