@@ -49,7 +49,7 @@ python tune_blockmatcher.py --use_stereobm --bm_settings settings.json calibrati
 # Lets use StereoSGBM block matcher and generate settings.json for block matcher:
 python tune_blockmatcher.py --bm_settings settings.json calibration_files stereo_images
 
-# Generate Point Cloud using stereo image:
+# Generate Point Cloud using stereo image and Block Matcher Settings:
 python images_to_pointcloud.py -h
 python images_to_pointcloud.py --bm_settings settings.json calibration_files left_1.ppm right_1.ppm output.ply
 ```
