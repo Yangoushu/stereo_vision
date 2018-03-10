@@ -32,16 +32,16 @@ import cv2
 import simplejson
 
 import numpy as np
-from stereovision.exceptions import (InvalidSearchRangeError,
-                                    InvalidWindowSizeError,
-                                    InvalidBMPresetError,
-                                    InvalidNumDisparitiesError,
-                                    InvalidSADWindowSizeError,
-                                    InvalidUniquenessRatioError,
-                                    InvalidSpeckleWindowSizeError,
-                                    InvalidSpeckleRangeError,
-                                    InvalidFirstDisparityChangePenaltyError,
-                                    InvalidSecondDisparityChangePenaltyError)
+# from exceptions import (InvalidSearchRangeError,
+#                                     InvalidWindowSizeError,
+#                                     InvalidBMPresetError,
+#                                     InvalidNumDisparitiesError,
+#                                     InvalidSADWindowSizeError,
+#                                     InvalidUniquenessRatioError,
+#                                     InvalidSpeckleWindowSizeError,
+#                                     InvalidSpeckleRangeError,
+#                                     InvalidFirstDisparityChangePenaltyError,
+#                                     InvalidSecondDisparityChangePenaltyError)
 
 
 class BlockMatcher(object):
@@ -127,8 +127,9 @@ class StereoBM(BlockMatcher):
         if value == 0 or not value % 16:
             self._search_range = value
         else:
-            raise InvalidSearchRangeError("Search range must be a multiple of "
-                                          "16.")
+            # raise InvalidSearchRangeError("Search range must be a multiple of "
+            #                               "16.")
+            print 'Search range must be a multiple of 16'
         self._replace_bm()
 
     @property
@@ -144,9 +145,10 @@ class StereoBM(BlockMatcher):
             value % 2):
             self._window_size = value
         else:
-            raise InvalidWindowSizeError("Window size must be an odd number "
-                                      "between 0 and {}.".format(
-                                      self.parameter_maxima["window_size"] + 1))
+            # raise InvalidWindowSizeError("Window size must be an odd number "
+            #                           "between 0 and {}.".format(
+            #                           self.parameter_maxima["window_size"] + 1))
+            print 'Invalid Window Size Error Exception'
         self._replace_bm()
 
     @property
@@ -162,8 +164,9 @@ class StereoBM(BlockMatcher):
                      cv2.STEREO_BM_NARROW_PRESET):
             self._bm_preset = value
         else:
-            raise InvalidBMPresetError("Stereo BM preset must be defined as "
-                                       "cv2.STEREO_BM_*_PRESET.")
+            # raise InvalidBMPresetError("Stereo BM preset must be defined as "
+            #                            "cv2.STEREO_BM_*_PRESET.")
+            print 'Stereo BM preset must be defined as cv2.STEREO_BM_*_PRESET'
         self._replace_bm()
 
     def _replace_bm(self):
@@ -241,9 +244,10 @@ class StereoSGBM(BlockMatcher):
         if value > 0 and value % 16 == 0:
             self._num_disp = value
         else:
-            raise InvalidNumDisparitiesError("numDisparities must be a "
-                                             "positive integer evenly "
-                                             "divisible by 16.")
+            # raise InvalidNumDisparitiesError("numDisparities must be a "
+            #                                  "positive integer evenly "
+            #                                  "divisible by 16.")
+            print 'Invalid Num Disparities Error Exception'
         self._replace_bm()
 
     @property
@@ -257,8 +261,9 @@ class StereoSGBM(BlockMatcher):
         if value >= 1 and value <= 11 and value % 2:
             self._sad_window_size = value
         else:
-            raise InvalidSADWindowSizeError("SADWindowSize must be odd and "
-                                            "between 1 and 11.")
+            # raise InvalidSADWindowSizeError("SADWindowSize must be odd and "
+            #                                 "between 1 and 11.")
+            print 'Invalid SAD Window size Error Exception'
         self._replace_bm()
 
     @property
@@ -272,8 +277,9 @@ class StereoSGBM(BlockMatcher):
         if value >= 5 and value <= 15:
             self._uniqueness = value
         else:
-            raise InvalidUniquenessRatioError("Uniqueness ratio must be "
-                                              "between 5 and 15.")
+            # raise InvalidUniquenessRatioError("Uniqueness ratio must be "
+            #                                   "between 5 and 15.")
+            print 'Invalid Uniqueness Ratio Error Exception'
         self._replace_bm()
 
     @property
@@ -287,9 +293,10 @@ class StereoSGBM(BlockMatcher):
         if value >= 0 and value <= 200:
             self._speckle_window_size = value
         else:
-            raise InvalidSpeckleWindowSizeError("Speckle window size must be 0 "
-                                                "for disabled checks or "
-                                                "between 50 and 200.")
+            # raise InvalidSpeckleWindowSizeError("Speckle window size must be 0 "
+            #                                     "for disabled checks or "
+            #                                     "between 50 and 200.")
+            print 'Invalid Speckle Window Size Error'
         self._replace_bm()
 
     @property
@@ -303,7 +310,8 @@ class StereoSGBM(BlockMatcher):
         if value >= 0:
             self._speckle_range = value
         else:
-            raise InvalidSpeckleRangeError("Speckle range cannot be negative.")
+            # raise InvalidSpeckleRangeError("Speckle range cannot be negative.")
+            print 'Invalid Speckle Range Error'
         self._replace_bm()
 
     @property
@@ -328,8 +336,9 @@ class StereoSGBM(BlockMatcher):
         if value < self.P2:
             self._P1 = value
         else:
-            raise InvalidFirstDisparityChangePenaltyError("P1 must be less "
-                                                          "than P2.")
+            # raise InvalidFirstDisparityChangePenaltyError("P1 must be less "
+            #                                               "than P2.")
+            print 'Invalid First Disparity Change Penalty Error'
         self._replace_bm()
 
     @property
@@ -343,8 +352,9 @@ class StereoSGBM(BlockMatcher):
         if value > self.P1:
             self._P2 = value
         else:
-            raise InvalidSecondDisparityChangePenaltyError("P2 must be greater "
-                                                          "than P1.")
+            # raise InvalidSecondDisparityChangePenaltyError("P2 must be greater "
+            #                                               "than P1.")
+            print 'Invalid Second Disparity change penalty error'
         self._replace_bm()
 
     @property

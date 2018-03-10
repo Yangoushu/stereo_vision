@@ -31,9 +31,9 @@ from argparse import ArgumentParser
 
 import cv2
 
-from stereovision.blockmatchers import StereoBM, StereoSGBM
-from stereovision.calibration import StereoCalibration
-from stereovision.ui_utils import find_files, BMTuner, STEREO_BM_FLAG
+from blockmatchers import StereoBM, StereoSGBM
+from calibration import StereoCalibration
+from ui_utils import find_files, BMTuner, STEREO_BM_FLAG
 
 
 def main():
