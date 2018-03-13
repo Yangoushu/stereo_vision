@@ -55,12 +55,15 @@ python images_to_pointcloud.py --bm_settings settings.json calibration_files lef
 ```
 
 ## 2. Installations and Setup:
-```
+```bash
 sudo pip3 install openpyxl
 
 # Install opencv3 (current version is 3.4.0)
 sudo pip3 install opencv-python
 
 # sudo pip3 install sklearn
+```
+
+Distance between two camera lenses = 110 mm
 
 
