@@ -1,10 +1,10 @@
 # Stereo Vision
 Distance measurement using Stereo Vision. This project mesaures the distance of an object using opencv stereo vision and python.
 
-## Installations and Setup:
+## 1. Installations and Setup:
 Stereo Camera Rig:
  <p align="center">
-  <img src="stereo_rig.jpg" width=600 height=400>
+  <img src="1.Point Cloud Generation/stereo_rig.jpg" width=600 height=400>
  </p>
 
  ``` bash
@@ -53,3 +53,14 @@ python tune_blockmatcher.py --bm_settings settings.json calibration_files stereo
 python images_to_pointcloud.py -h
 python images_to_pointcloud.py --bm_settings settings.json calibration_files left_1.ppm right_1.ppm output.ply
 ```
+
+## 2. Installations and Setup:
+```
+sudo pip3 install openpyxl
+
+# Install opencv3 (current version is 3.4.0)
+sudo pip3 install opencv-python
+
+# sudo pip3 install sklearn
+
+
