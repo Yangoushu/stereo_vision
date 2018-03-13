@@ -53,6 +53,7 @@ python tune_blockmatcher.py --bm_settings settings.json calibration_files stereo
 python images_to_pointcloud.py -h
 python images_to_pointcloud.py --bm_settings settings.json calibration_files left_1.ppm right_1.ppm output.ply
 ```
+Python Version = 2.7.14
 
 ## 2. Installations and Setup:
 ```bash
@@ -65,5 +66,6 @@ sudo pip3 install opencv-python
 ```
 
 Distance between two camera lenses = 110 mm
+Python Version = 3.5.2
 
 
