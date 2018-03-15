@@ -8,7 +8,7 @@ kernel = np.ones((3, 3), np.uint8)  # Filtering
 
 def coords_mouse_disp(event, x, y, flags, param):
     if event == cv2.EVENT_LBUTTONDBLCLK:
-        print (x, y, disp[y, x], filteredImg[y, x])
+        print(x, y, disp[y, x], filteredImg[y, x])
         average = 0
         for u in range(-1,2):
             for v in range(-1, 2):
@@ -78,18 +78,16 @@ print('Cameras are ready to use!')
 # StereoCalibrate function
 flags = 0
 flags |= cv2.CALIB_FIX_INTRINSIC
-print('flags:', flags)
-print('cv2 version:', cv2.__version__)
-#flags |= cv2.CALIB_FIX_PRINCIPAL_POINT
-#flags |= cv2.CALIB_USE_INTRINSIC_GUESS
-#flags |= cv2.CALIB_FIX_FOCAL_LENGTH
-#flags |= cv2.CALIB_FIX_ASPECT_RATIO
-#flags |= cv2.CALIB_ZERO_TANGENT_DIST
-#flags |= cv2.CALIB_RATIONAL_MODEL
-#flags |= cv2.CALIB_SAME_FOCAL_LENGTH
-#flags |= cv2.CALIB_FIX_K3
-#flags |= cv2.CALIB_FIX_K4
-#flags |= cv2.CALIB_FIX_K5
+# flags |= cv2.CALIB_FIX_PRINCIPAL_POINT
+# flags |= cv2.CALIB_USE_INTRINSIC_GUESS
+# flags |= cv2.CALIB_FIX_FOCAL_LENGTH
+# flags |= cv2.CALIB_FIX_ASPECT_RATIO
+# flags |= cv2.CALIB_ZERO_TANGENT_DIST
+# flags |= cv2.CALIB_RATIONAL_MODEL
+# flags |= cv2.CALIB_SAME_FOCAL_LENGTH
+# flags |= cv2.CALIB_FIX_K3
+# flags |= cv2.CALIB_FIX_K4
+# flags |= cv2.CALIB_FIX_K5
 retS, MLS, dLS, MRS, dRS, R, T, E, F = cv2.stereoCalibrate(objpoints, imgpointsL, imgpointsR, mtxL, distL, mtxR, distR,
                                                            ChessImaR.shape[::-1], criteria_stereo, flags)
 
@@ -157,7 +155,7 @@ while True:
     grayL = cv2.cvtColor(Left_nice,cv2.COLOR_BGR2GRAY)
 
     # Compute the 2 images for the Depth_image
-    disp = stereo.compute(grayL,grayR)#.astype(np.float32)/ 16
+    disp = stereo.compute(grayL, grayR)  # as type(np.float32)/ 16
     dispL = disp
     dispR = stereoR.compute(grayR,grayL)
     dispL = np.int16(dispL)
