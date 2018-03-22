@@ -61,6 +61,7 @@ sudo pip3 install openpyxl
 
 # Install opencv3 (current version is 3.4.0)
 sudo pip3 install opencv-python
+sudo pip3 install opencv-contrib-python
 
 sudo pip3 install sklearn
 ```
