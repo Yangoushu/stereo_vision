@@ -9,4 +9,4 @@
    b) Little one Disparity differences do not lead to large differences in distance.
    c) From that one can conclude that the stereo vision has a high depth resolution, only for objects close to the camera
 
-5.
+5. Dark Color => Far object, Light Color = Near object
