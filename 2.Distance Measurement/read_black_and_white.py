@@ -3,14 +3,15 @@ import cv2  					     # Import opencv library of python
 black_pixel_count = 0
 white_pixel_count = 0
 
-img = cv2.imread('black_and_white.jpg', 1)
+img = cv2.imread('gray_shades.png', 1)
 img = cv2.resize(img, (320, 240))    # Resize the image width x height
 # x-axis = 320px, y-axis = 240px
 
 # black = 0, white = 255
+img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 cv2.imshow('My Image', img)
 cv2.waitKey(0)
-
+print(img[210, 210])
 for y in range(1, 240):
     for x in range(1, 320):
         px = img[y, x]                     # access the particular pixel

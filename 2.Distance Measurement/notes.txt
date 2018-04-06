@@ -4,7 +4,7 @@
 
 3. Focal Length = 2.3 mm
 
-4. It can be seen that there is a nonlinear relationship between disparity and distance gives.
+4. It can be seen thataaaaa  there is a nonlinear relationship between disparity and distance gives.
    a) When the disparity is close to 0, small disparity differences lead to large ones Distance differences.
    b) Little one Disparity differences do not lead to large differences in distance.
    c) From that one can conclude that the stereo vision has a high depth resolution, only for objects close to the camera

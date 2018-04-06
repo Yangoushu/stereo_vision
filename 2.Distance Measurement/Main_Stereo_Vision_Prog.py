@@ -4,6 +4,9 @@ import cv2
 from sklearn.preprocessing import normalize
 
 kernel = np.ones((3, 3), np.uint8)  # Filtering
+black_pixel_count = 0
+white_pixel_count = 0
+white_pixels = 0
 
 
 def coords_mouse_disp(event, x, y, flags, param):
@@ -51,8 +54,8 @@ print('Starting calibration for the 2 cameras... ')
 # Call all saved images
 for i in range(1, 100):
     t = str(i)
-    ChessImaR = cv2.imread('calibration_images/left_' + t + '.ppm', 0)  # Right side
-    ChessImaL = cv2.imread('calibration_images/right_' + t + '.ppm', 0)  # Left side
+    ChessImaR = cv2.imread('calibration_images2/left_' + t + '.ppm', 0)  # Right side
+    ChessImaL = cv2.imread('calibration_images2/right_' + t + '.ppm', 0)  # Left side
     retR, cornersR = cv2.findChessboardCorners(ChessImaR, (9, 6), None)
     retL, cornersL = cv2.findChessboardCorners(ChessImaL, (9, 6), None)
     if (retR == True) and (retL == True):
@@ -119,8 +122,8 @@ wls_filter = cv2.ximgproc.createDisparityWLSFilter(matcher_left=stereo)
 wls_filter.setLambda(lmbda)
 wls_filter.setSigmaColor(sigma)
 
-CamR = cv2.VideoCapture(1)
-CamL = cv2.VideoCapture(2)
+CamR = cv2.VideoCapture(0)
+CamL = cv2.VideoCapture(1)
 
 CamR.set(3, 320)
 CamR.set(4, 240)
@@ -182,20 +185,35 @@ while True:
     dispC = dispc.astype(np.uint8)
     disp_Color = cv2.applyColorMap(dispC, cv2.COLORMAP_OCEAN)  # Change the Color of the Picture into an Ocean Color_Map
     filt_Color = cv2.applyColorMap(filteredImg, cv2.COLORMAP_OCEAN)
-
-    jet_map = cv2.applyColorMap(filteredImg, cv2.COLORMAP_JET)
-    bone_map = cv2.applyColorMap(filteredImg, cv2.COLORMAP_BONE)
+    jet_color = cv2.applyColorMap(filteredImg, cv2.COLORMAP_JET)
+    bone_color = cv2.applyColorMap(filteredImg, cv2.COLORMAP_BONE)
 
     # Show the result for the Depth_image
     # cv2.imshow('Disparity', disp)
     # cv2.imshow('Closing', closing)
     # cv2.imshow('Color Depth', disp_Color)
-    cv2.imshow('Filtered Color Depth', filt_Color)
-    cv2.imshow('Jet Mapping', jet_map)
-    cv2.imshow('Bone Mapping', bone_map)
+    # cv2.imshow('Filtered Color Depth', filt_Color)
+    cv2.imshow('jet color', jet_color)
+    cv2.imshow('bone color', bone_color)
 
     # Mouse click on filtered color depth image to get the distance of that clicked object
-    cv2.setMouseCallback("Filtered Color Depth", coords_mouse_disp, filt_Color)
+    # cv2.setMouseCallback("Filtered Color Depth", coords_mouse_disp, filt_Color)
+    img = cv2.cvtColor(bone_color, cv2.COLOR_BGR2GRAY)
+    cv2.imshow('grayscaled image', img)
+    ##########################################################################################################
+    # My Logic:
+    for y in range(1, 240):
+        for x in range(1, 320):
+            px = img[y, x]  # access the particular pixel
+            white_pixels = white_pixels + px
+
+    # print('black pixels count =', black_pixel_count)
+    print('white pixels =', white_pixels)
+    print('Total pixels = ', 320*240*150)
+    percent = (white_pixels/(320*240*150)) * 100
+    print('covered space in % =', percent)
+    white_pixels = 0
+    ##########################################################################################################
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
