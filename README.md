@@ -4,7 +4,7 @@ Distance measurement using Stereo Vision. This project mesaures the distance of 
 
 Depth Map using Stereo Camera:
  <p align="center">
-  <img src="1.Point Cloud Generation/stereo_rig.jpg" width=600 height=400>
+  <img src="stereo_image_depth.jpg" width=600 height=400>
  </p>
  
 ## 1. Installations and Setup:
