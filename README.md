@@ -5,8 +5,10 @@ Distance measurement using Stereo Vision. This project mesaures the distance of 
 Depth Map using Stereo Camera:
  <p align="center">
   <img src="stereo_image_depth.jpg" width=800 height=400>
- </p>
- 
+ </p> 
+Youtube Video Link: https://www.youtube.com/watch?v=2GG_30n2X8E&t=69s
+<hr>
+
 ## 1. Installations and Setup:
 Stereo Camera Rig:
  <p align="center">
@@ -77,5 +79,5 @@ Python Version = 3.5.2
 
 Opencv Version = 3.4.0
 
-Youtube Video Link: https://www.youtube.com/watch?v=2GG_30n2X8E&t=69s
+
 
