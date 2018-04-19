@@ -10,7 +10,7 @@ Depth Map using Stereo Camera:
 ## 1. Installations and Setup:
 Stereo Camera Rig:
  <p align="center">
-  <img src="1.Point Cloud Generation/stereo_rig.jpg" width=600 height=400>
+  <img src="1.Point Cloud Generation/stereo_rig.jpg" width=640 height=480>
  </p>
 
  ``` bash
