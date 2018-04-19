@@ -67,5 +67,6 @@ sudo pip3 install sklearn
 
 Distance between two camera lenses = 110 mm
 Python Version = 3.5.2
+Opencv Version = 3.4.0
 
 

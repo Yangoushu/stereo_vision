@@ -1,0 +1,17 @@
+1. Larger the distance between two cameras, better the possibility of rating the distance
+
+2. Resolution = 640 x 480
+
+3. Focal Length = 2.3 mm
+
+4. It can be seen thataaaaa  there is a nonlinear relationship between disparity and distance gives.
+   a) When the disparity is close to 0, small disparity differences lead to large ones Distance differences.
+   b) Little one Disparity differences do not lead to large differences in distance.
+   c) From that one can conclude that the stereo vision has a high depth resolution, only for objects close to the camera
+
+5. Dark Color => Far object, Light Color = Near object
+
+6. Use Python2 and Opencv2 for 1. Point Cloud Generation
+
+7. Use Python3 and Opencv3 for 2. Distance Measurement
+

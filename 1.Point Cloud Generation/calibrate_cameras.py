@@ -21,8 +21,7 @@ Calibrate stereo camera based on detected chessboard corners.
 """
 
 from argparse import ArgumentParser
-from ui_utils import (find_files, calibrate_folder,
-                                  CHESSBOARD_ARGUMENTS)
+from ui_utils import (find_files, calibrate_folder, CHESSBOARD_ARGUMENTS)
 
 
 def main():

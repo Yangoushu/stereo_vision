@@ -1,10 +1,8 @@
-###################################
-##### Authors:                #####
-##### Stephane Vujasinovic    #####
-##### Frederic Uhrweiller     ##### 
-#####                         #####
-##### Creation: 2017          #####
-###################################
+"""
+Note: Use capture_chessboards.py code from 1. Point Cloud Generation for
+Taking the Images for calibration. I have not used Take_images_for_calibration
+code.
+"""
 
 import numpy as np
 import cv2
