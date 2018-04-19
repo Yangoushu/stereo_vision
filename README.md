@@ -1,6 +1,12 @@
 # Stereo Vision
 Distance measurement using Stereo Vision. This project mesaures the distance of an object using opencv stereo vision and python.
 
+
+Depth Map using Stereo Camera:
+ <p align="center">
+  <img src="1.Point Cloud Generation/stereo_rig.jpg" width=600 height=400>
+ </p>
+ 
 ## 1. Installations and Setup:
 Stereo Camera Rig:
  <p align="center">
@@ -66,7 +72,10 @@ sudo pip3 install sklearn
 ```
 
 Distance between two camera lenses = 110 mm
+
 Python Version = 3.5.2
+
 Opencv Version = 3.4.0
 
+Youtube Video Link: https://www.youtube.com/watch?v=2GG_30n2X8E&t=69s
 
