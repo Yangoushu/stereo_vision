@@ -7,7 +7,7 @@ Depth Map using Stereo Camera:
   <img src="stereo_image_depth.jpg" width=800 height=400>
  </p> 
 Youtube Video Link: https://www.youtube.com/watch?v=2GG_30n2X8E&t=69s
-<hr>
+
 
 ## 1. Installations and Setup:
 Stereo Camera Rig:
