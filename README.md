@@ -63,6 +63,8 @@ python images_to_pointcloud.py --bm_settings settings.json calibration_files lef
 ```
 Python Version = 2.7.14
 
+Opencv Version = 2.4.11
+
 ## 2. Installations and Setup:
 ```bash
 sudo pip3 install openpyxl
