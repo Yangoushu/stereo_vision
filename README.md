@@ -12,7 +12,7 @@ Youtube Video Link: https://www.youtube.com/watch?v=2GG_30n2X8E&t=69s
 ## 1. Installations and Setup:
 Stereo Camera Rig:
  <p align="center">
-  <img src="1.Point Cloud Generation/stereo_rig.jpg" width=600 height=300>
+  <img src="1.Point Cloud Generation/stereo_rig.jpg" width=600 height=400>
  </p>
 
  ``` bash
