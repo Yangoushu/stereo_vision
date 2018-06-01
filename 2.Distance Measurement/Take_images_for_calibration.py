@@ -2,6 +2,7 @@
 Note: Use capture_chessboards.py code from 1. Point Cloud Generation for
 Taking the Images for calibration. I have not used Take_images_for_calibration
 code.
+Authors: Frederic Uhrweiller & Stephane Vujasinovic
 """
 
 import numpy as np
