@@ -1,5 +1,6 @@
 """
 This program generates Depth Map of an Image using Stereovision
+Authors: Frederic Uhrweiller & Stephane Vujasinovic
 """
 
 import numpy as np
